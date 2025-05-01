@@ -1,0 +1,28 @@
+/*
+Theme Name: thème-33w
+Theme URI: https://referenced.ca
+Author: Camille Breau
+Author URI: https://github.com/cambreau/33w
+Description: Thème de base développer dans le cadre du cours de Worpress
+Version: 1.0
+Tested up to: 6.2
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: club-voyage
+*/
+
+/* Importation des  feuilles de style du thème */
+
+/* variables */
+@import "variable/couleurs";
+
+/* Base */
+@import "base/titre";
+
+/* Layout */
+@import "layout/entete";
+
+/* composants */
+@import "composants/bouton";
+@import "composants/menu";
