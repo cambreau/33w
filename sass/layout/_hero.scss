@@ -1,0 +1,15 @@
+.hero {
+    background-image: url("images/maldives.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+
+    &__titre {}
+
+    &__description {}
+}

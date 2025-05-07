@@ -15,14 +15,20 @@ Text Domain: club-voyage
 /* Importation des  feuilles de style du thème */
 
 /* variables */
-@import "variable/couleurs";
+@import "variables/couleurs";
 
 /* Base */
-@import "base/titre";
+@import "base/h1";
 
 /* Layout */
+@import "layout/general";
 @import "layout/entete";
+@import "layout/hero";
 
-/* composants */
-@import "composants/bouton";
-@import "composants/menu";
+
+/* ////////////////////////////////  composants */
+@import "composants/recherche";
+@import "composants/inscription-form";
+
+//@import "composants/bouton";
+//@import "composants/menu";

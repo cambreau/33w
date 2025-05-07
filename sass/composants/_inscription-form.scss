@@ -1,0 +1,9 @@
+.inscription-form {
+    background-color: $couleur-fond;
+    border: solid 1px $couleur-bordure;
+    box-shadow: 0 5px 10px 0 $couleur-bordure;
+    position: absolute;
+    bottom: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+}

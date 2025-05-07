@@ -1,0 +1,44 @@
+/* ///////////////////////////// Layout .entete */
+
+.entete {
+    background-color: $couleur-fond;
+
+    &__contenu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo-container {
+        max-height: 75px;
+    }
+
+    &__logo {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /*  /////////////////////// Navigation */
+    &__nav {
+        margin: 0 2rem 0 auto;
+    }
+
+    &__menu {
+        // ul
+        display: flex;
+        list-style-type: none;
+        gap: 1rem;
+    }
+
+    &__menu-item {
+        //li
+
+        a {
+            display: block;
+
+            &:hover {
+                background-color: $couleur-principal;
+                color: $couleur-fond;
+            }
+        }
+    }
+}
