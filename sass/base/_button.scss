@@ -1,0 +1,8 @@
+button {
+  color: $couleur-texte;
+  background-color: $couleur-fond;
+}
+
+button:hover {
+  background-color: $couleur-principal;
+}

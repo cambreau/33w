@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Prototype de la page d'accueil" />
@@ -10,61 +9,140 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="entete">
-        <div class="entete__contenu">
-            <picture class="entete__logo-container">
-                <img src="images/logo.png" alt="" class="entete__logo" />
-            </picture>
-            <nav class="entete__nav">
-                <ul class="entete__menu">
-                    <li class="entete__menu-item"><a href="#">Aventure</a></li>
-                    <li class="entete__menu-item"><a href="#">Culturel</a></li>
-                    <li class="entete__menu-item"><a href="#">Zen</a></li>
-                    <li class="entete__menu-item"><a href="#">Sport</a></li>
-                    <li class="entete__menu-item"><a href="#">Croisière</a></li>
-                    <li class="entete__menu-item"><a href="#">Repos</a></li>
-                </ul>
-            </nav>
-            <form class="recherche" action="">
-                <input class="recherche__input" type="search" name="" id="" />
-                <button class="recherche__bouton">
-                    <img src="https://s2.svgbox.net/hero-solid.svg?ic=search&color=000" width="32" height="32" />
-                </button>
-            </form>
-        </div>
-    </header>
-    <section class="hero">
-        <div class="hero__contenu">
-            <h1 class="hero__titre">Club de voyage</h1>
-            <p class="hero__description">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                incidunt quas eius totam veniam, molestiae officiis cupiditate ut
-                possimus tempore veritatis illum dignissimos, pariatur atque nulla
-                architecto a natus voluptatibus!
-            </p>
-        </div>
-        <form class="inscription-form" action="">
-            <label class="inscription__label" for="nom">Nom</label>
-            <input class="inscription__input" id="nom" type="text" placeholder="Entrez votre nom" />
-            <label class="inscription__label" for="prenom">Prénom</label>
-            <input class="inscription__input" id="prenom" type="text" placeholder="Entrez votre prénom" />
-            <label class="inscription__label" for="courriel">Courriel</label>
-            <input class="inscription__input" id="courriel" type="email" placeholder="Entrez votre courriel" />
-            <label class="inscription__label" for="telephone">Téléphone</label>
-            <input class="inscription__input" id="telephone" type="text" placeholder="Entrez votre téléphone" pattern="^\d{3}-\d{3}-\d{4}$
-            " />
-            <button class="inscription__bouton">S'inscrire</button>
+      <picture class="entete__logo-container">
+        <img src="images/logo.png" alt="" class="entete__logo" />
+      </picture>
+      <div class="entete__nav-recherche">
+        <nav class="entete__nav">
+          <ul class="entete__menu">
+            <li class="entete__menu-item"><a href="#">Aventure</a></li>
+            <li class="entete__menu-item"><a href="#">Culturel</a></li>
+            <li class="entete__menu-item"><a href="#">Zen</a></li>
+            <li class="entete__menu-item"><a href="#">Sport</a></li>
+            <li class="entete__menu-item"><a href="#">Croisière</a></li>
+            <li class="entete__menu-item"><a href="#">Repos</a></li>
+          </ul>
+        </nav>
+        <form class="recherche" action="">
+          <input
+            class="recherche__input"
+            type="search"
+            name="recherche"
+            id="recherche"
+            placeholder="recherche..."
+          />
+          <button class="recherche__bouton">
+            <img
+              src="https://s2.svgbox.net/hero-solid.svg?ic=search&color=000"
+              width="25"
+              height="25"
+            />
+          </button>
         </form>
-    </section>
-    <section class="galerie">fjfgjfgj</section>
-    <section class="populaire">fjfgj</section>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <section class="hero__contenu">
+          <h1 class="hero__titre">Club de voyage</h1>
+          <p class="hero__description">
+            Partez à la découverte du monde avec nos séjours soigneusement
+            sélectionnés aux quatre coins de la planète.
+          </p>
+          <p class="hero__description">
+            Que vous soyez en quête d'aventure, de détente ou de culture, nous
+            avons le voyage qu'il vous faut.
+          </p>
+          <p class="hero__description">info@voyageavecnous.com</p>
+          <p class="hero__description">20 rue la prairie, Brossard</p>
+          <p class="hero__description">1-800-555-1234</p>
+          <div class="reseaux-sociaux">
+            <a href="https://www.facebook.com/">
+              <img
+                src="images/facebook.png"
+                width="35"
+                height="35"
+              />
+            </a>
+            <a href="https://www.instagram.com/">
+              <img
+                src="images/instagram.png"
+                width="35"
+                height="35"
+              />
+            </a>
+        </section>
+        <form class="inscription-form" action="">
+          <div class="inscription-form__label-input">
+            <label class="inscription__label" for="nom">Nom</label>
+            <input
+              class="inscription-form__input"
+              id="nom"
+              type="text"
+              placeholder="Entrez votre nom"
+            />
+          </div>
+          <div class="inscription-form__label-input">
+            <label class="inscription-form__label" for="prenom">Prénom</label>
+            <input
+              class="inscription-form__input"
+              id="prenom"
+              type="text"
+              placeholder="Entrez votre prénom"
+            />
+          </div>
+          <div class="inscription-form__label-input">
+            <label class="inscription__label" for="courriel">Courriel</label>
+            <input
+              class="inscription-form__input"
+              id="courriel"
+              type="email"
+              placeholder="Entrez votre courriel"
+            />
+          </div>
+          <div class="inscription-form__label-input">
+            <label class="inscription-form__label" for="telephone"
+              >Téléphone</label
+            >
+            <input
+              class="inscription-form__input"
+              id="telephone"
+              type="text"
+              placeholder="Entrez votre téléphone"
+              pattern="^\d{3}-\d{3}-\d{4}$
+            "
+            />
+          </div>
+          <div class="inscription-form__bouton-container">
+            <button class="inscription-form__bouton">S'inscrire</button>
+          </div>
+        </form>
+      </div>
+      <section class="galerie">
+        <h2 class="galerie__titre">Nos destinations favorites</h2>
+        <div class="galerie__images">
+          <img src="images/image1.jpg" alt="" class="galerie__image" />
+          <img src="images/image2.jpg" alt="" class="galerie__image" />
+          <img src="images/image3.jpg" alt="" class="galerie__image" />
+          <img src="images/image4.jpg" alt="" class="galerie__image" />
+          <img src="images/image5.jpg" alt="" class="galerie__image" />
+          <img src="images/image6.jpg" alt="" class="galerie__image" />
+          <img src="images/image7.jpg" alt="" class="galerie__image" />
+          <img src="images/image8.jpg" alt="" class="galerie__image" />
+          <img src="images/image9.jpg" alt="" class="galerie__image" />
+          <img src="images/image10.jpg" alt="" class="galerie__image" />
+        </div>
+      </section>
+      <section class="populaire">fjfgj</section>
+    </main>
     <footer class="piedpage">fjfjfg</footer>
-</body>
-
+  </body>
 </html>

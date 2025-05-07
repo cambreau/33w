@@ -1,0 +1,12 @@
+a {
+  font-family: $font-family-principal;
+  font-size: $taille-normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $couleur-texte;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: $epaisseur-police-gras;
+}

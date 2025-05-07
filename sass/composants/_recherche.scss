@@ -1,17 +1,16 @@
-/**
-/////////////////////////////// Compsant .recherche
-*/
+/* / ////////////////////////////// Compsant .recherche */
+
 .recherche {
-    border: 1px solid #aaa;
-    display: flex;
-    align-items: center;
+  border: 1px solid $couleur-bordure;
+  display: flex;
+  align-items: center;
 
-    &__input {
-        border: none;
-        outline: none;
-    }
+  &__input {
+    border: none;
+    border-left: 1px solid $couleur-bordure;
+  }
 
-    &__bouton {
-        border-left: 1px solid #aaa;
-    }
+  &__bouton {
+    border-left: 1px solid #aaa;
+  }
 }

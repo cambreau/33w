@@ -1,9 +1,27 @@
 .inscription-form {
-    background-color: $couleur-fond;
-    border: solid 1px $couleur-bordure;
-    box-shadow: 0 5px 10px 0 $couleur-bordure;
-    position: absolute;
-    bottom: -4%;
-    left: 50%;
-    transform: translateX(-50%);
+  display: flex;
+  padding: $espacement-normal;
+  gap: $espacement-normal;
+  background-color: $couleur-fond;
+  border: solid 1px $couleur-bordure;
+  box-shadow: 0 5px 10px 0 $couleur-bordure;
+  position: absolute;
+  bottom: -4%;
+  left: 50%;
+  transform: translateX(-50%);
+  &__label-input {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input {
+    border: 1px solid $couleur-principal;
+  }
+  &__bouton-container {
+    align-content: end;
+  }
+  &__bouton {
+    width: 200px;
+    border: 1px solid $couleur-principal;
+    padding: $espacement-petit $espacement-normal;
+  }
 }

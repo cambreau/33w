@@ -1,44 +1,40 @@
 /* ///////////////////////////// Layout .entete */
 
 .entete {
-    background-color: $couleur-fond;
+  display: flex;
+  padding: $espacement-normal;
+  position: relative;
 
-    &__contenu {
-        display: flex;
-        justify-content: space-between;
-    }
+  /*  /////////////////////// Logo */
+  &__logo-container {
+    max-height: 75px;
+  }
 
-    &__logo-container {
-        max-height: 75px;
-    }
+  &__logo {
+    height: 100%;
+    object-fit: cover;
+  }
 
-    &__logo {
-        height: 100%;
-        object-fit: cover;
-    }
+  /*  /////////////////////// Navigation et Recherche conteneur */
+  &__nav-recherche {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: $espacement-normal;
+  }
 
-    /*  /////////////////////// Navigation */
-    &__nav {
-        margin: 0 2rem 0 auto;
-    }
+  /*  /////////////////////// Navigation */
+  &__nav {
+    display: flex;
+    gap: $espacement-normal;
+    align-items: center;
+  }
 
-    &__menu {
-        // ul
-        display: flex;
-        list-style-type: none;
-        gap: 1rem;
-    }
-
-    &__menu-item {
-        //li
-
-        a {
-            display: block;
-
-            &:hover {
-                background-color: $couleur-principal;
-                color: $couleur-fond;
-            }
-        }
-    }
+  &__menu {
+    display: flex;
+    list-style: none;
+    gap: $espacement-normal;
+  }
 }

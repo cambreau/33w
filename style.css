@@ -14,12 +14,64 @@ Text Domain: club-voyage
 */
 /* Importation des  feuilles de style du thème */
 /* variables */
+/* --- Font family --- */
+/* --- Taille de police --- */
+/* --- Epaisseur de police --- */
 /* Base */
-/* Layout */
-html {
-  box-sizing: border-box;
+h1 {
+  font-family: "montserrat", sans-serif;
+  font-size: clamp(2rem, 1vw + 2.2rem, 2.5rem);
+  font-weight: 700;
+  color: rgb(6, 3, 36);
 }
 
+h2 {
+  font-family: "montserrat", sans-serif;
+  font-size: clamp(1.5rem, 1vw + 1.7rem, 2rem);
+  font-weight: 500;
+  color: rgb(6, 3, 36);
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: rgb(6, 3, 36);
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(6, 3, 36);
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+input {
+  padding: 3px;
+}
+
+label {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: rgb(6, 3, 36);
+  width: 200px;
+}
+
+button {
+  color: rgb(6, 3, 36);
+  background-color: rgb(251, 249, 244);
+}
+
+button:hover {
+  background-color: #6bc5e6;
+}
+
+/* Layout */
 *,
 *:before,
 *:after {
@@ -27,33 +79,27 @@ html {
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   border: 1px solid #ccc;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
-  margin: 0;
-  padding: 0;
-}
-
-.global {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  max-width: 900px;
-  margin: 0 auto;
+  background-color: rgb(251, 249, 244);
 }
 
 /* ///////////////////////////// Layout .entete */
 .entete {
-  background-color: rgb(251, 249, 244);
-  /*  /////////////////////// Navigation */
-}
-.entete__contenu {
   display: flex;
-  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  /*  /////////////////////// Logo */
+  /*  /////////////////////// Navigation et Recherche conteneur */
+  /*  /////////////////////// Navigation */
 }
 .entete__logo-container {
   max-height: 75px;
@@ -62,22 +108,26 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.entete__nav-recherche {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 20px;
+}
 .entete__nav {
-  margin: 0 2rem 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 .entete__menu {
   display: flex;
-  list-style-type: none;
-  gap: 1rem;
-}
-.entete__menu-item a {
-  display: block;
-}
-.entete__menu-item a:hover {
-  background-color: rgb(108, 197, 230);
-  color: rgb(251, 249, 244);
+  list-style: none;
+  gap: 20px;
 }
 
+/* ///////////////////////////// Layout .hero */
 .hero {
   background-image: url("images/maldives.jpg");
   background-position: center;
@@ -89,10 +139,36 @@ body {
   justify-content: space-around;
   position: relative;
 }
+.hero__contenu {
+  max-width: 400px;
+  background-color: rgba(251, 249, 244, 0.7);
+  border-radius: 5%;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+.hero__description {
+  margin: 20px 0;
+}
+
+/* ///////////////////////////// Layout .galerie */
+.galerie {
+  margin: 20px;
+  margin-top: 60px;
+  overflow: hidden;
+}
+.galerie__images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.galerie__image {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  margin: 3px;
+}
+
 /* ////////////////////////////////  composants */
-/**
-/////////////////////////////// Compsant .recherche
-*/
+/* / ////////////////////////////// Compsant .recherche */
 .recherche {
   border: 1px solid #aaa;
   display: flex;
@@ -100,13 +176,16 @@ body {
 }
 .recherche__input {
   border: none;
-  outline: none;
+  border-left: 1px solid #aaa;
 }
 .recherche__bouton {
   border-left: 1px solid #aaa;
 }
 
 .inscription-form {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
   background-color: rgb(251, 249, 244);
   border: solid 1px #aaa;
   box-shadow: 0 5px 10px 0 #aaa;
@@ -114,4 +193,19 @@ body {
   bottom: -4%;
   left: 50%;
   transform: translateX(-50%);
+}
+.inscription-form__label-input {
+  display: flex;
+  flex-direction: column;
+}
+.inscription-form__input {
+  border: 1px solid #6bc5e6;
+}
+.inscription-form__bouton-container {
+  align-content: end;
+}
+.inscription-form__bouton {
+  width: 200px;
+  border: 1px solid #6bc5e6;
+  padding: 3px 20px;
 }/*# sourceMappingURL=style.css.map */

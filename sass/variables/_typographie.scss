@@ -1,0 +1,16 @@
+//Typographie
+/* --- Font family --- */
+$font-family-principal: "Poppins", sans-serif; // Poppins est la police principale
+$font-family-decorative: "montserrat", sans-serif; // Roboto est la police secondaire
+/* --- Taille de police --- */
+$taille-normal: 1rem;
+$taille-moyenne: clamp(
+  1.5rem,
+  1vw + 1.7rem,
+  2rem
+); // 1.5rem = 24px, 2rem = 32px
+$taille-grande: clamp(2rem, 1vw + 2.2rem, 2.5rem); // 2rem = 32px, 2.5rem = 40px
+/* --- Epaisseur de police --- */
+$epaisseur-police-normale: 400;
+$epaisseur-police-gras: 500;
+$epaisseur-police-tres-gras: 700;
