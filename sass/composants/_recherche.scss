@@ -5,12 +5,19 @@
   display: flex;
   align-items: center;
 
+  /*  /////////////////////// Input */
   &__input {
     border: none;
     border-left: 1px solid $couleur-bordure;
   }
 
+  /*  /////////////////////// Bouton */
   &__bouton {
-    border-left: 1px solid #aaa;
+    border-left: 1px solid $couleur-bordure;
+  }
+
+  /*  /////////////////////// Media */
+  @media screen and (max-width: $tablette) {
+    display: none;
   }
 }

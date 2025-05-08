@@ -11,6 +11,7 @@
   justify-content: space-around;
   position: relative;
 
+  *  ///////////////////////   Contenu */
   &__contenu {
     max-width: 400px;
     background-color: transparentize($couleur-fond, 0.3);
@@ -19,10 +20,22 @@
     margin-bottom: $espacement-large;
   }
 
-  &__titre {
+  &__description {
+    margin-bottom: $espacement-normal;
   }
 
-  &__description {
-    margin: $espacement-normal 0;
+  *  /////////////////////// Bouton */
+  &__bouton {
+    background-color: $couleur-principal;
+    text-transform: uppercase;
+    border: 2px solid $couleur-principal;
+    border-radius: 5px;
+    padding: $espacement-petit $espacement-normal;
+    margin-bottom: $espacement-normal;
+  }
+
+  &__bouton:hover {
+    background-color: $couleur-fond;
+    font-weight: $epaisseur-police-gras;
   }
 }

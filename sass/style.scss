@@ -18,6 +18,7 @@ Text Domain: club-voyage
 @import "variables/couleurs";
 @import "variables/typographie";
 @import "variables/espacement";
+@import "variables/breakpoint";
 
 /* Base */
 @import "base/h1";
@@ -32,6 +33,7 @@ Text Domain: club-voyage
 @import "layout/entete";
 @import "layout/hero";
 @import "layout/galerie";
+@import "layout/piedpage";
 
 /* ////////////////////////////////  composants */
 @import "composants/recherche";

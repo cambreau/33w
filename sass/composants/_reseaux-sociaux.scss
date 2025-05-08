@@ -1,0 +1,10 @@
+/* / ////////////////////////////// Compsant .recherche */
+
+.reseaux-sociaux {
+  margin: 0 $espacement-normal;
+
+  /*  /////////////////////// Media */
+  @media screen and (max-width: $tablette) {
+    display: none;
+  }
+}

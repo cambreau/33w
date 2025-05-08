@@ -82,7 +82,6 @@ button:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid #ccc;
 }
 
 body {
@@ -97,9 +96,13 @@ body {
   display: flex;
   padding: 20px;
   position: relative;
+  z-index: 1;
+  overflow: visible;
   /*  /////////////////////// Logo */
+  /*  /////////////////////// Menu toggle */
   /*  /////////////////////// Navigation et Recherche conteneur */
   /*  /////////////////////// Navigation */
+  /*  /////////////////////// Media */
 }
 .entete__logo-container {
   max-height: 75px;
@@ -108,6 +111,11 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.entete__toggle-icon {
+  display: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
 .entete__nav-recherche {
   display: flex;
   position: absolute;
@@ -115,6 +123,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   gap: 20px;
+  overflow: visible;
 }
 .entete__nav {
   display: flex;
@@ -125,6 +134,36 @@ body {
   display: flex;
   list-style: none;
   gap: 20px;
+}
+@media (max-width: 900px) {
+  .entete__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .entete__menu {
+    display: none;
+    width: 100vw;
+    padding: 20px;
+    background-color: rgb(251, 249, 244);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
+  .entete__toggle-icon {
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    width: 50px;
+  }
+  .entete .entete_toggle:checked + .entete__toggle-icon + .entete__menu {
+    display: flex;
+  }
 }
 
 /* ///////////////////////////// Layout .hero */
@@ -139,7 +178,7 @@ body {
   justify-content: space-around;
   position: relative;
 }
-.hero__contenu {
+* .hero__contenu {
   max-width: 400px;
   background-color: rgba(251, 249, 244, 0.7);
   border-radius: 5%;
@@ -147,7 +186,19 @@ body {
   margin-bottom: 60px;
 }
 .hero__description {
-  margin: 20px 0;
+  margin-bottom: 20px;
+}
+* .hero__bouton {
+  background-color: #6bc5e6;
+  text-transform: uppercase;
+  border: 2px solid #6bc5e6;
+  border-radius: 5px;
+  padding: 3px 20px;
+  margin-bottom: 20px;
+}
+.hero__bouton:hover {
+  background-color: rgb(251, 249, 244);
+  font-weight: 500;
 }
 
 /* ///////////////////////////// Layout .galerie */
@@ -155,16 +206,45 @@ body {
   margin: 20px;
   margin-top: 60px;
   overflow: hidden;
+  /*  /////////////////////// Conteneur images */
+  /*  /////////////////////// Image */
+  /*  /////////////////////// Media */
 }
 .galerie__images {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
 }
 .galerie__image {
-  width: 270px;
-  height: 270px;
+  width: 265px;
+  height: 265px;
   object-fit: cover;
   margin: 3px;
+}
+@media screen and (max-width: 1400px) {
+  .galerie__images {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 1180px) {
+  .galerie__images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 900px) {
+  .galerie__images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .galerie__images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.piedpage {
+  text-align: center;
+  padding: 20px;
 }
 
 /* ////////////////////////////////  composants */
@@ -173,6 +253,9 @@ body {
   border: 1px solid #aaa;
   display: flex;
   align-items: center;
+  /*  /////////////////////// Input */
+  /*  /////////////////////// Bouton */
+  /*  /////////////////////// Media */
 }
 .recherche__input {
   border: none;
@@ -181,7 +264,13 @@ body {
 .recherche__bouton {
   border-left: 1px solid #aaa;
 }
+@media screen and (max-width: 900px) {
+  .recherche {
+    display: none;
+  }
+}
 
+/* / ////////////////////////////// Compsant .inscription-form */
 .inscription-form {
   display: flex;
   padding: 20px;
@@ -193,6 +282,9 @@ body {
   bottom: -4%;
   left: 50%;
   transform: translateX(-50%);
+  /*  /////////////////////// Label & Input */
+  /*  /////////////////////// Bouton */
+  /*  /////////////////////// Media */
 }
 .inscription-form__label-input {
   display: flex;
@@ -208,4 +300,9 @@ body {
   width: 200px;
   border: 1px solid #6bc5e6;
   padding: 3px 20px;
+}
+@media screen and (max-width: 1180px) {
+  .inscription-form {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,5 @@
+/* / ////////////////////////////// Compsant .inscription-form */
+
 .inscription-form {
   display: flex;
   padding: $espacement-normal;
@@ -9,6 +11,8 @@
   bottom: -4%;
   left: 50%;
   transform: translateX(-50%);
+
+  /*  /////////////////////// Label & Input */
   &__label-input {
     display: flex;
     flex-direction: column;
@@ -16,6 +20,8 @@
   &__input {
     border: 1px solid $couleur-principal;
   }
+
+  /*  /////////////////////// Bouton */
   &__bouton-container {
     align-content: end;
   }
@@ -23,5 +29,9 @@
     width: 200px;
     border: 1px solid $couleur-principal;
     padding: $espacement-petit $espacement-normal;
+  }
+  /*  /////////////////////// Media */
+  @media screen and (max-width: $desktop) {
+    display: none;
   }
 }

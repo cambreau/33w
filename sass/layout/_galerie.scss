@@ -5,14 +5,40 @@
   margin-top: $espacement-large;
   overflow: hidden;
 
+  /*  /////////////////////// Conteneur images */
   &__images {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
   }
+
+  /*  /////////////////////// Image */
   &__image {
-    width: 270px;
-    height: 270px;
+    width: 265px;
+    height: 265px;
     object-fit: cover;
     margin: $espacement-petit;
+  }
+
+  /*  /////////////////////// Media */
+  @media screen and (max-width: $grand-ecran) {
+    &__images {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media screen and (max-width: $desktop) {
+    &__images {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: $tablette) {
+    &__images {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: $mobile) {
+    &__images {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
