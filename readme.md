@@ -4,4 +4,4 @@
 
 #### Auteur : Camille Breau
 
-#### Adresse de la github-page : https://github.com/cambreau/33w
+#### Adresse de la github-page : https://cambreau.github.io/33w/
