@@ -10,11 +10,7 @@
   /*  /////////////////////// Logo */
   &__logo-container {
     max-height: 75px;
-  }
-
-  &__logo {
-    height: 100%;
-    object-fit: cover;
+    max-width: 75px;
   }
 
   /*  /////////////////////// Menu toggle */
@@ -81,4 +77,10 @@
       display: flex;
     }
   }
+}
+
+.custom-logo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

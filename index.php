@@ -83,11 +83,12 @@
         </div>
       </section>
       <section class="populaire">
-        <article>
+        <h2 class="populaire__titre">Nos destinations populaires</h2>
+        <article class="populaire__article">
         <?php if (have_posts()): 
           while (have_posts()): the_post(); ?>    
-              <h2 class="populaire__titre"><?php the_title(); ?></h2>
-              <div class="populaire__contenu">
+              <h3 class="populaire__article-titre"><?php the_title(); ?></h3>
+              <div class="populaire__article-contenu">
                 <?php the_content(); ?>
               </div>
             </article>

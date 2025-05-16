@@ -16,8 +16,9 @@
 </head>
   <body>
     <header class="entete">
+    
       <picture class="entete__logo-container">
-        <img src="images/logo.png" alt="" class="entete__logo" />
+          <?php echo get_custom_logo(); ?>
       </picture>
       <div class="entete__nav-recherche">
         <nav class="entete__nav">

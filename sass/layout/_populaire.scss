@@ -1,0 +1,14 @@
+/* ///////////////////////////// Layout .entete */
+.populaire {
+  margin: $espacement-normal;
+  margin-top: $espacement-large;
+
+  &__article {
+    margin: $espacement-normal 0;
+  }
+  &__article-contenu {
+    text-align: justify;
+    margin-bottom: $espacement-normal;
+    margin-left: $espacement-normal;
+  }
+}

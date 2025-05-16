@@ -32,6 +32,13 @@ h2 {
   color: rgb(6, 3, 36);
 }
 
+h2 {
+  font-family: "montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(6, 3, 36);
+}
+
 p {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
@@ -106,10 +113,7 @@ body {
 }
 .entete__logo-container {
   max-height: 75px;
-}
-.entete__logo {
-  height: 100%;
-  object-fit: cover;
+  max-width: 75px;
 }
 .entete__toggle-icon {
   display: none;
@@ -164,6 +168,12 @@ body {
   .entete .entete_toggle:checked + .entete__toggle-icon + .entete__menu {
     display: flex;
   }
+}
+
+.custom-logo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* ///////////////////////////// Layout .hero */
@@ -245,6 +255,20 @@ body {
 .piedpage {
   text-align: center;
   padding: 20px;
+}
+
+/* ///////////////////////////// Layout .entete */
+.populaire {
+  margin: 20px;
+  margin-top: 60px;
+}
+.populaire__article {
+  margin: 20px 0;
+}
+.populaire__article-contenu {
+  text-align: justify;
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 /* ////////////////////////////////  composants */
