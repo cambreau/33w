@@ -16,17 +16,11 @@
 </head>
   <body>
     <header class="entete">
-    
       <picture class="entete__logo-container">
           <?php echo get_custom_logo(); ?>
       </picture>
       <div class="entete__nav-recherche">
         <nav class="entete__nav">
-          <?php wp_nav_menu( array(
-          'menu' => 'principal',
-            'container' => false,
-            'menu_class' => 'entete__menu'
-        ) ); ?>
           <input
             type="checkbox"
             id="menu-toggle"
@@ -34,6 +28,11 @@
             hidden
           />
           <label for="menu-toggle" class="entete__toggle-icon">☰</label>
+             <?php wp_nav_menu( array(
+          'menu' => 'principal',
+            'container' => false,
+            'menu_class' => 'entete__menu'
+        ) ); ?>
         </nav>
 
         <form class="recherche" action="">
