@@ -252,29 +252,43 @@ body {
   }
 }
 
+/* ///////////////////////////// Layout .populaire */
+.populaire {
+  margin: 20px;
+  margin-top: 60px;
+}
+.populaire__conteneur-articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 60px 0;
+}
+.populaire__article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.populaire__article-titre {
+  text-align: center;
+}
+.populaire__article-contenu {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
 .piedpage {
   text-align: center;
   padding: 20px;
 }
 
-/* ///////////////////////////// Layout .entete */
-.populaire {
-  margin: 20px;
-  margin-top: 60px;
-}
-.populaire__article {
-  margin: 20px 0;
-}
-.populaire__article-contenu {
-  text-align: justify;
-  margin-bottom: 20px;
-  margin-left: 20px;
-}
-
 /* ////////////////////////////////  composants */
 /* / ////////////////////////////// Compsant .recherche */
 .recherche {
-  border: 1px solid #aaa;
   display: flex;
   align-items: center;
   /*  /////////////////////// Input */
@@ -283,7 +297,6 @@ body {
 }
 .recherche__input {
   border: none;
-  border-left: 1px solid #aaa;
 }
 .recherche__bouton {
   border-left: 1px solid #aaa;

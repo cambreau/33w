@@ -1,14 +1,12 @@
 /* / ////////////////////////////// Compsant .recherche */
 
 .recherche {
-  border: 1px solid $couleur-bordure;
   display: flex;
   align-items: center;
 
   /*  /////////////////////// Input */
   &__input {
     border: none;
-    border-left: 1px solid $couleur-bordure;
   }
 
   /*  /////////////////////// Bouton */
