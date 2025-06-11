@@ -30,12 +30,13 @@ h2 {
   font-size: clamp(1.5rem, 1vw + 1.7rem, 2rem);
   font-weight: 500;
   color: rgb(6, 3, 36);
+  padding-bottom: 20px;
 }
 
-h2 {
+h3 {
   font-family: "montserrat", sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   color: rgb(6, 3, 36);
 }
 
@@ -193,7 +194,7 @@ body {
   background-color: rgba(251, 249, 244, 0.7);
   border-radius: 5%;
   padding: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 .hero__description {
   margin-bottom: 20px;
@@ -213,72 +214,34 @@ body {
 
 /* ///////////////////////////// Layout .galerie */
 .galerie {
-  margin: 20px;
-  margin-top: 60px;
+  margin: 80px 20px 20px 20px;
   overflow: hidden;
-  /*  /////////////////////// Conteneur images */
-  /*  /////////////////////// Image */
-  /*  /////////////////////// Media */
 }
-.galerie__images {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
+
+/* ///////////////////////////// Layout .carte */
+.carte {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 20px;
+  width: 250px;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
-.galerie__image {
-  width: 265px;
-  height: 265px;
-  object-fit: cover;
-  margin: 3px;
-}
-@media screen and (max-width: 1400px) {
-  .galerie__images {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media screen and (max-width: 1180px) {
-  .galerie__images {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 900px) {
-  .galerie__images {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 600px) {
-  .galerie__images {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.carte__conteneur {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 /* ///////////////////////////// Layout .populaire */
 .populaire {
-  margin: 20px;
-  margin-top: 60px;
-}
-.populaire__conteneur-articles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin: 60px 0;
-}
-.populaire__article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-}
-.populaire__article-titre {
-  text-align: center;
-}
-.populaire__article-contenu {
-  text-align: center;
-  margin-bottom: 20px;
-  margin-left: 20px;
+  margin: 80px 20px 20px 20px;
 }
 
 .piedpage {

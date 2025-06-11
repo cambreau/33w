@@ -1,0 +1,20 @@
+/* ///////////////////////////// Layout .carte */
+.carte {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: $espacement-normal;
+  width: 250px;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  gap: $espacement-normal;
+  &__conteneur {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $espacement-normal;
+    justify-content: center;
+  }
+}

@@ -10,11 +10,12 @@ h2 {
   font-size: $taille-moyenne;
   font-weight: $epaisseur-police-gras;
   color: $couleur-texte;
+  padding-bottom: $espacement-normal;
 }
 
-h2 {
+h3 {
   font-family: $font-family-decorative;
   font-size: $taille-normal;
-  font-weight: $epaisseur-police-gras;
+  font-weight: $epaisseur-police-tres-gras;
   color: $couleur-texte;
 }
