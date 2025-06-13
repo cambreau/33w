@@ -7,6 +7,7 @@
                 Partez à la découverte du monde avec nos séjours soigneusement
                 sélectionnés aux quatre coins de la planète.
             </p>
+            <p class="hero__description">Auteur: Camille Breau</p>
             <p class="hero__description">info@voyageavecnous.com</p>
             <p class="hero__description">20 rue la prairie, Brossard</p>
             <p class="hero__description">1-800-555-1234</p>
