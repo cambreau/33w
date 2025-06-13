@@ -8,8 +8,7 @@
 ?>
 
 <?php get_header() ?>
-<h1>trace seulement à retirer -------------- single.php -----------</h1>
-<section class="populaire">
+<section class="carte-unique">
   <?php if (have_posts()) {
     while (have_posts()) {
       /* affiche l'image « mise en avant » miniature */
@@ -19,11 +18,11 @@
       <h1><?php
           /* affiche le titre pricipal du « post » */
           the_title(); ?></h1>
-
+      <p class="carte-unique__description">
   <?php
       /* cette fontion permet d'afficher l'ensemble du contenu (même les images) du post (article ou page)*/
-      the_content();
+        the_content();
     }
-  } ?>
+  } ?></p>
 </section>
 <?php get_footer();

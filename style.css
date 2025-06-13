@@ -216,6 +216,18 @@ li {
   font-weight: 500;
 }
 
+.carte-unique {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin: 40px;
+}
+.carte-unique__description {
+  text-align: center;
+  max-width: 30%;
+}
+
 .piedpage {
   display: flex;
   flex-direction: column;
@@ -239,11 +251,11 @@ li {
     gap: 20px;
   }
 }
-.piedpage__description {
+.piedpage__ligne-1__description {
   justify-content: center;
 }
 @media screen and (max-width: 900px) {
-  .piedpage__description {
+  .piedpage__ligne-1__description {
     display: none;
   }
 }

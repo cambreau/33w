@@ -19,12 +19,12 @@
       flex-direction: column;
       gap: $espacement-normal;
     }
-  }
 
-  &__description {
-    justify-content: center;
-    @media screen and (max-width: $tablette) {
-      display: none;
+    &__description {
+      justify-content: center;
+      @media screen and (max-width: $tablette) {
+        display: none;
+      }
     }
   }
 }
