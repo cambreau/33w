@@ -5,18 +5,26 @@
   padding: $espacement-moyen $espacement-normal;
   font-family: $font-family-principal;
   gap: $espacement-moyen;
-}
-.piedpage__ligne-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  color: $couleur-fond;
-}
+  &__ligne-1 *,
+  &__ligne-2 * {
+    color: $couleur-fond;
+  }
 
-.piedpage__ligne-1 *,
-.piedpage__ligne-2 * {
-  color: $couleur-fond;
-}
+  &__ligne-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    color: $couleur-fond;
+    @media screen and (max-width: $tablette) {
+      display: flex;
+      flex-direction: column;
+      gap: $espacement-normal;
+    }
+  }
 
-.piedpage__description {
-  justify-content: center;
+  &__description {
+    justify-content: center;
+    @media screen and (max-width: $tablette) {
+      display: none;
+    }
+  }
 }

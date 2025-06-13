@@ -19,6 +19,9 @@
     border-radius: $espacement-petit;
     padding: $espacement-normal;
     width: 30%;
+    @media screen and (max-width: $tablette) {
+      width: 50%;
+    }
     &__lien {
       color: $couleur-principal;
       font-weight: $epaisseur-police-gras;
@@ -27,14 +30,6 @@
       border-radius: $espacement-petit;
       margin-left: $espacement-normal;
       color: $couleur-fond;
-    }
-  }
-}
-
-@media screen and (max-width: $tablette) {
-  .conteneur {
-    &__carte {
-      width: 50%;
     }
   }
 }

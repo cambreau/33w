@@ -224,20 +224,28 @@ li {
   font-family: "Poppins", sans-serif;
   gap: 40px;
 }
-
+.piedpage__ligne-1 *, .piedpage__ligne-2 * {
+  color: #fbf8f4;
+}
 .piedpage__ligne-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   color: #fbf8f4;
 }
-
-.piedpage__ligne-1 *,
-.piedpage__ligne-2 * {
-  color: #fbf8f4;
+@media screen and (max-width: 900px) {
+  .piedpage__ligne-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
-
 .piedpage__description {
   justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .piedpage__description {
+    display: none;
+  }
 }
 
 /* ////////////////////////////////  composants */
@@ -319,6 +327,11 @@ li {
   padding: 20px;
   width: 30%;
 }
+@media screen and (max-width: 900px) {
+  .conteneur__carte {
+    width: 50%;
+  }
+}
 .conteneur__carte__lien {
   color: #66bca4;
   font-weight: 500;
@@ -327,10 +340,4 @@ li {
   border-radius: 3px;
   margin-left: 20px;
   color: #fbf8f4;
-}
-
-@media screen and (max-width: 900px) {
-  .conteneur__carte {
-    width: 50%;
-  }
 }/*# sourceMappingURL=style.css.map */
