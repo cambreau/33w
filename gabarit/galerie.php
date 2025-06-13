@@ -5,6 +5,6 @@
  * Permet d'afficher la galerie
  */
 ?>
-<article class='galerie__image'>
+<article class='galerie'>
     <?php the_content(); ?>
 </article>

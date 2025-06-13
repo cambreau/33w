@@ -8,9 +8,7 @@
    <main>
     </h1>---------------- index.php -----------</h1>
       <!-- C'est une trace pour debugage seulement, a retirer sur la version finale -->
-       <section class="populaire">
-        <h2>Nos destinations populaires</h2>
-        <div class="carte__conteneur">
+      <div class="conteneur">
           <?php 
           if (have_posts()): 
           ?>
@@ -30,7 +28,6 @@
           endif;
           ?>
         </div>
-      </section>
    </main>
    <!-- Recupere le footer -->
    <?php get_footer(); ?> 

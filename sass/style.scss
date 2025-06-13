@@ -32,14 +32,12 @@ Text Domain: club-voyage
 @import "layout/general";
 @import "layout/entete";
 @import "layout/hero";
-@import "layout/galerie";
-@import "layout/carte";
-@import "layout/populaire";
 @import "layout/piedpage";
 
 /* ////////////////////////////////  composants */
 @import "composants/recherche";
 @import "composants/inscription-form";
+@import "composants/carte";
 
 //@import "composants/bouton";
 //@import "composants/menu";

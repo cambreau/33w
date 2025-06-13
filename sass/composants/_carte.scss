@@ -1,0 +1,32 @@
+/* ///////////////////////////// Layout .carte */
+
+.conteneur {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $espacement-normal;
+  margin: $espacement-large $espacement-normal;
+
+  &__carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $espacement-base;
+    align-items: center;
+    border: 1px solid #dfd6d6;
+    background-color: $couleur-secondaire;
+    border-radius: $espacement-petit;
+    padding: $espacement-normal;
+    width: 50%;
+    &__lien {
+      color: $couleur-principal;
+      font-weight: $epaisseur-police-gras;
+      background-color: $couleur-principal;
+      padding: $espacement-petit;
+      border-radius: $espacement-petit;
+      margin-left: $espacement-normal;
+      color: $couleur-fond;
+    }
+  }
+}

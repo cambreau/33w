@@ -34,22 +34,7 @@
             'menu_class' => 'entete__menu'
         ) ); ?>
         </nav>
-
-        <form class="recherche" action="">
-          <input
-            class="recherche__input"
-            type="search"
-            name="recherche"
-            id="recherche"
-            placeholder="recherche..."
-          />
-          <button class="recherche__bouton">
-            <img
-              src="https://s2.svgbox.net/hero-solid.svg?ic=search&color=000"
-              width="25"
-              height="25"
-            />
-          </button>
-        </form>
+        <?php get_search_form(); ?>
+        
       </div>
     </header>
