@@ -6,8 +6,6 @@
    <!-- Recupere le header -->
    <?php get_header(); ?>
    <main>
-    </h1>---------------- index.php -----------</h1>
-      <!-- C'est une trace pour debugage seulement, a retirer sur la version finale -->
       <div class="conteneur">
           <?php 
           if (have_posts()): 

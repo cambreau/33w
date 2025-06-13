@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <main>
     <div class="hero">
-        <h1>---------------- Front-page.php -----------</h1>
         <section class="hero__contenu">
             <h1 class="hero__titre">Club de voyage</h1>
             <p class="hero__description">
@@ -13,12 +12,7 @@
             <p class="hero__description">1-800-555-1234</p>
             <button class="hero__bouton">S'inscrire</button>
             <div class="reseaux-sociaux">
-                <a href="https://www.facebook.com/">
-                    <img src="images/facebook.png" width="40" height="40" />
-                </a>
-                <a href="https://www.instagram.com/">
-                    <img src="images/instagram.png" width="40" height="40" />
-                </a>
+                <?php get_template_part('gabarit/icone'); ?>
             </div>
         </section>
         <form class="inscription-form" action="">

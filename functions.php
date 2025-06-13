@@ -2,6 +2,7 @@
 function mon_theme_supports()
 {
     add_theme_support('post-thumbnails');
+    add_image_size('miniature', 150, 100, true); // Taille carrée
     add_theme_support('title-tag');
     add_theme_support('menus');
     add_theme_support('custom-logo', array(
@@ -16,9 +17,20 @@ add_action('after_setup_theme', 'mon_theme_supports');
 
 function theme_tp_enqueue_styles()
 {
-    wp_enqueue_style('normalize', get_template_directory_uri() . 'normalize.css');
-    wp_enqueue_style('main-style', get_stylesheet_uri());
+    wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css');
+  
+
+   $style_path=get_template_directory().'/style.css';
+   $style_url=get_template_directory_uri().'/style.css';
+  
+   wp_enqueue_style('main-style',
+    $style_url,
+    array(),
+    filemtime($style_path),
+    null,
+);
 }
+
 add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');
 
 

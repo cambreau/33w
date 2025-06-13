@@ -12,13 +12,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: $espacement-base;
+    gap: $espacement-normal;
     align-items: center;
     border: 1px solid #dfd6d6;
     background-color: $couleur-secondaire;
     border-radius: $espacement-petit;
     padding: $espacement-normal;
-    width: 50%;
+    width: 30%;
     &__lien {
       color: $couleur-principal;
       font-weight: $epaisseur-police-gras;
@@ -27,6 +27,14 @@
       border-radius: $espacement-petit;
       margin-left: $espacement-normal;
       color: $couleur-fond;
+    }
+  }
+}
+
+@media screen and (max-width: $tablette) {
+  .conteneur {
+    &__carte {
+      width: 50%;
     }
   }
 }

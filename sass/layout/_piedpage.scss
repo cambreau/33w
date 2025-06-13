@@ -1,4 +1,22 @@
 .piedpage {
-  text-align: center;
-  padding: $espacement-normal;
+  display: flex;
+  flex-direction: column;
+  background-color: $couleur-principal;
+  padding: $espacement-moyen $espacement-normal;
+  font-family: $font-family-principal;
+  gap: $espacement-moyen;
+}
+.piedpage__ligne-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  color: $couleur-fond;
+}
+
+.piedpage__ligne-1 *,
+.piedpage__ligne-2 * {
+  color: $couleur-fond;
+}
+
+.piedpage__description {
+  justify-content: center;
 }

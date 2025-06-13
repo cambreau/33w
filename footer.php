@@ -1,8 +1,29 @@
-    <footer class="piedpage">
-      <p class="piedpage__droits-reserves">
-        Tous droits réservés &copy; 2025 Voyager Avec Nous: Agence Voyage
-      </p>
-    </footer>
-     <?php wp_footer(); ?>
-  </body>
+  <footer class="piedpage">
+        <div class="piedpage__ligne-1">
+            <div class="piedpage__lien">
+              <h3>Liens sur les voyages</h3>
+                <?php wp_nav_menu(array(
+                    "menu" => "externe",
+                    "container" => "nav"
+                )) ?>
+            </div>
+            <section class="piedpage__adresse">
+            <h3>Coordonnées et recherche</h3>
+                <p class="piedpage__coordonnees">info@voyageavecnous.com</p>
+                <p class="piedpage__coordonnees">20 rue la prairie, Brossard</p>
+                <p class="piedpage__coordonnees">1-800-555-1234</p>
+                <?php get_search_form() ?>
+            </section>
+            <p class="piedpage__description">
+            Bienvenue sur Évasion Totale, votre portail vers des expériences inoubliables aux quatre coins du globe ! Que vous soyez un passionné de sport, un adepte de la relaxation ou un aventurier dans l’âme, nous avons sélectionné pour vous les meilleures destinations et activités pour répondre à toutes vos envies de voyage.
+            </p>
+        </div>
+        <div class="piedpage__ligne-2">
+            <div class="piedpage__icone">
+            <?php get_template_part('gabarit/icone'); ?>
+            </div>
+        </div>
+  </footer>
+</body>
+<?php wp_footer(); ?>
 </html>
