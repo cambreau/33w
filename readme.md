@@ -1,9 +1,5 @@
-# TP1 - Site de voyage
-
-### Première étape du développement d'un thème WP
+# TP1 - Création d'un site WordPress pour un club de voyage
 
 #### Auteur : Camille Breau
-
-#### Adresse de la github-page : https://cambreau.github.io/33w/
 
 #### Site distant : https://gftnth00.mywhc.ca/33we_04/
