@@ -1,0 +1,23 @@
+.carte-unique {
+  display: flex;
+  flex-direction: column;
+  gap: $espacement-normal;
+  align-items: center;
+  margin: $espacement-moyen;
+  &__categories .post-categories > * {
+    background-color: $couleur-bordure;
+    color: white;
+    font-weight: $epaisseur-police-gras;
+    border-radius: 5px;
+    padding: $espacement-petit;
+    margin: $espacement-petit;
+    text-align: center;
+  }
+  &__categories .post-categories > li > a {
+    color: white;
+  }
+  &__description {
+    text-align: center;
+    max-width: 30%;
+  }
+}

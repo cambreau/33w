@@ -31,5 +31,26 @@
       margin-left: $espacement-normal;
       color: $couleur-fond;
     }
+    &__temperature,
+    &__note {
+      display: flex;
+    }
+    &__temperature img,
+    &__note img {
+      display: block;
+      width: 30px;
+    }
+    &__categories .post-categories > * {
+      background-color: $couleur-bordure;
+      color: white;
+      font-weight: $epaisseur-police-gras;
+      border-radius: 5px;
+      padding: $espacement-petit;
+      margin: $espacement-petit;
+      text-align: center;
+    }
+    &__categories .post-categories > li > a {
+      color: white;
+    }
   }
 }

@@ -223,6 +223,18 @@ li {
   align-items: center;
   margin: 40px;
 }
+.carte-unique__categories .post-categories > * {
+  background-color: #93afaf;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+  text-align: center;
+}
+.carte-unique__categories .post-categories > li > a {
+  color: white;
+}
 .carte-unique__description {
   text-align: center;
   max-width: 30%;
@@ -352,4 +364,23 @@ li {
   border-radius: 3px;
   margin-left: 20px;
   color: #fbf8f4;
+}
+.conteneur__carte__temperature, .conteneur__carte__note {
+  display: flex;
+}
+.conteneur__carte__temperature img, .conteneur__carte__note img {
+  display: block;
+  width: 30px;
+}
+.conteneur__carte__categories .post-categories > * {
+  background-color: #93afaf;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+  text-align: center;
+}
+.conteneur__carte__categories .post-categories > li > a {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
