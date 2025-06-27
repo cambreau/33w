@@ -19,7 +19,8 @@
           /* affiche le titre pricipal du « post » */
           the_title(); ?></h1>
       <div class="carte-unique__categories">
-          <?php the_category(); ?></div>
+          <?php the_category(); ?>
+      </div>
       <p class="carte-unique__description">
   <?php
       /* cette fontion permet d'afficher l'ensemble du contenu (même les images) du post (article ou page)*/
