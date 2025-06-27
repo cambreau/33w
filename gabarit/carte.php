@@ -13,7 +13,7 @@ $lien = "<a class='conteneur__carte__lien' href=" . get_permalink() . ">Suite</a
     <p><?php echo wp_trim_words(get_the_excerpt(), 10, $lien); ?></p>
     <p class="conteneur__carte__note">
   <img src="<?php echo get_template_directory_uri(); ?>/images/stars.png" alt="Note Client">Note client :
-  <?php the_field('note_client'); ?> &deg;C
+  <?php the_field('note_client'); ?>
 </p>
     <p class="conteneur__carte__temperature">
   <img src="<?php echo get_template_directory_uri(); ?>/images/temp-min.png" alt="Température minimum">Min :
