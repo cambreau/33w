@@ -1,4 +1,4 @@
-# TP1 - Création d'un site WordPress pour un club de voyage
+# TP2 - Création d'un site WordPress pour un club de voyage
 
 #### Auteur : Camille Breau
 
