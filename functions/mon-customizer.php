@@ -68,4 +68,4 @@ function club_voyage_customize_register($wp_customize)
     ));
 }
 
-add_action('customize_register', 'club-voyage_customize_register');
+add_action('customize_register', 'club_voyage_customize_register');

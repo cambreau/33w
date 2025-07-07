@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 <main>
-    <div class="hero">
-    <section class="hero" style="background-image: url('<?= get_template_directory_uri() ?>/images/maldives.jpg');">
-    <?php get_template_part("gabarit/hero"); ?>
-    <?php get_template_part("gabarit/populaire"); ?>
+        <?php $hero_background = get_theme_mod("hero_background"); ?>
+
+        <section class="hero" style="background-image: url('<?= $hero_background ?>');">
+        <?php get_template_part("gabarit/hero"); ?>
+        <div class="piedpage__icone">
+            </div>
         <form class="inscription-form" action="">
             <div class="inscription-form__label-input">
                 <label class="inscription__label" for="nom">Nom</label>
@@ -25,19 +27,9 @@
                 <button class="inscription-form__bouton">S'inscrire</button>
             </div>
         </form>
-    </div>
-
+    </section>
     <div class="conteneur global">
-        <?php if (have_posts()) {
-            while (have_posts()) {
-                the_post();
-                if (in_category('galerie')) {
-                    get_template_part("gabarit/galerie");
-                } else {
-                    get_template_part("gabarit/carte");
-                }
-            }
-        } ?>
-    </div>
+        <?php get_template_part("gabarit/populaire"); ?> 
+    </div> 
 </main>
 <?php get_footer(); ?>
