@@ -7,6 +7,8 @@
    <?php get_header(); ?>
    <main>
       <div class="conteneur">
+          <h2><?php single_cat_title() ?></h2>
+          <?= category_description(); ?>
           <?php 
           if (have_posts()): 
           ?>

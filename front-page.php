@@ -1,21 +1,9 @@
 <?php get_header(); ?>
 <main>
     <div class="hero">
-        <section class="hero__contenu">
-            <h1 class="hero__titre">Club de voyage</h1>
-            <p class="hero__description">
-                Partez à la découverte du monde avec nos séjours soigneusement
-                sélectionnés aux quatre coins de la planète.
-            </p>
-            <p class="hero__description">Auteur: Camille Breau</p>
-            <p class="hero__description">info@voyageavecnous.com</p>
-            <p class="hero__description">20 rue la prairie, Brossard</p>
-            <p class="hero__description">1-800-555-1234</p>
-            <button class="hero__bouton">S'inscrire</button>
-            <div class="reseaux-sociaux">
-                <?php get_template_part('gabarit/icone'); ?>
-            </div>
-        </section>
+    <section class="hero" style="background-image: url('<?= get_template_directory_uri() ?>/images/maldives.jpg');">
+    <?php get_template_part("gabarit/hero"); ?>
+    <?php get_template_part("gabarit/populaire"); ?>
         <form class="inscription-form" action="">
             <div class="inscription-form__label-input">
                 <label class="inscription__label" for="nom">Nom</label>

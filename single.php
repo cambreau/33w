@@ -8,6 +8,10 @@
 ?>
 
 <?php get_header() ?>
+<?php
+the_content();
+      edit_post_link();
+?>
 <section class="carte-unique">
   <?php if (have_posts()) {
     while (have_posts()) {
