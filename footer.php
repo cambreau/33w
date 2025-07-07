@@ -1,4 +1,8 @@
   <footer class="piedpage">
+  <?php
+    $footer_couleur = "#66bcbc";
+    vague("#e9fcf5", $footer_couleur); ?>
+    <footer class="piedpage" style="background-color: <?= $footer_couleur ?> ;">
         <div class="piedpage__ligne-1">
             <div class="piedpage__lien">
               <h3>Liens sur les voyages</h3>
@@ -19,7 +23,7 @@
             </p>
         </div>
         <div class="piedpage__ligne-2">
-            <?php icone_sociaux($hero_couleur) ?>
+            <?php icone_sociaux('#e9fcf5') ?>
         </div>
   </footer>
 </body>

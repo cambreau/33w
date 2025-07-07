@@ -76,7 +76,7 @@ button {
 }
 
 button:hover {
-  background-color: #66bca4;
+  background-color: #66bcbc;
 }
 
 /* Layout */
@@ -204,9 +204,9 @@ li {
   margin-bottom: 20px;
 }
 * .hero__bouton {
-  background-color: #66bca4;
+  background-color: #66bcbc;
   text-transform: uppercase;
-  border: 2px solid #66bca4;
+  border: 2px solid #66bcbc;
   border-radius: 5px;
   padding: 3px 20px;
   margin-bottom: 20px;
@@ -243,7 +243,7 @@ li {
 .piedpage {
   display: flex;
   flex-direction: column;
-  background-color: #66bca4;
+  background-color: #66bcbc;
   padding: 40px 20px;
   font-family: "Poppins", sans-serif;
   gap: 40px;
@@ -314,14 +314,14 @@ li {
   flex-direction: column;
 }
 .inscription-form__input {
-  border: 1px solid #66bca4;
+  border: 1px solid #66bcbc;
 }
 .inscription-form__bouton-container {
   align-content: end;
 }
 .inscription-form__bouton {
   width: 200px;
-  border: 1px solid #66bca4;
+  border: 1px solid #66bcbc;
   padding: 3px 20px;
 }
 @media screen and (max-width: 1180px) {
@@ -357,9 +357,9 @@ li {
   }
 }
 .conteneur__carte__lien {
-  color: #66bca4;
+  color: #66bcbc;
   font-weight: 500;
-  background-color: #66bca4;
+  background-color: #66bcbc;
   padding: 3px;
   border-radius: 3px;
   margin-left: 20px;
