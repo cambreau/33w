@@ -19,9 +19,7 @@
             </p>
         </div>
         <div class="piedpage__ligne-2">
-            <div class="piedpage__icone">
-            <?php get_template_part('gabarit/icone'); ?>
-            </div>
+            <?php icone_sociaux($hero_couleur) ?>
         </div>
   </footer>
 </body>

@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 <main>
-        <?php $hero_background = get_theme_mod("hero_background"); ?>
+        
 
-        <section class="hero" style="background-image: url('<?= $hero_background ?>');">
+        <section class="hero">
+        <?php $hero_background = get_theme_mod("hero_background"); ?>
         <?php get_template_part("gabarit/hero"); ?>
         <div class="piedpage__icone">
             </div>
