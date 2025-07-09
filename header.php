@@ -3,6 +3,7 @@
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="<?php home_url(); ?>">
     <meta name="description" content="Prototype de la page d'accueil" />
     <meta name="author" content="Camille Breau" />
     <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>

@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 <main>
-        
-
-        <section class="hero">
+    <section class="hero">
         <?php
             $hero_background[0] = get_theme_mod("hero_background_0");
             $hero_background[1] = get_theme_mod("hero_background_1");
@@ -18,7 +16,7 @@
             <input type="radio" class="carrousel__radio" name="carrousel__radio">
         </form>
         <div class="piedpage__icone">
-            </div>
+        </div>
         <form class="inscription-form" action="">
             <div class="inscription-form__label-input">
                 <label class="inscription__label" for="nom">Nom</label>
@@ -44,5 +42,9 @@
     <div class="conteneur global">
         <?php get_template_part("gabarit/populaire"); ?> 
     </div> 
+    <section class="destination">
+        <h2 class="destination__titre">Articles de la catégorie</h2>
+        <div class="destination__list"></div>
+    </section>
 </main>
 <?php get_footer(); ?>
