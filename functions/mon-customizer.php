@@ -37,13 +37,57 @@ function club_voyage_customize_register($wp_customize)
     ));
     ////////////////////// image
     /* créer le champ */
-    $wp_customize->add_setting('hero_background', array(
+    $wp_customize->add_setting('hero_background_0', array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',
     ));
     /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
-        'label' => __('Image en arrière plan', 'club-voyage'),
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_0', array(
+        'label' => __('Image en arrière plan', 'theme_31w'),
+        'section' => 'hero_section',
+    )));
+     // image 1
+    /* créer le champ */
+    $wp_customize->add_setting('hero_background_1', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    /* créer le contrôleur */
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_1', array(
+        'label' => __('Image en arrière plan', 'theme_31w'),
+        'section' => 'hero_section',
+    )));
+    // image 2
+    /* créer le champ */
+    $wp_customize->add_setting('hero_background_2', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    /* créer le contrôleur */
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_2', array(
+        'label' => __('Image en arrière plan', 'theme_31w'),
+        'section' => 'hero_section',
+    )));
+    // image 1
+    /* créer le champ */
+    $wp_customize->add_setting('hero_background_1', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    /* créer le contrôleur */
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_1', array(
+        'label' => __('Image en arrière plan', 'theme_31w'),
+        'section' => 'hero_section',
+    )));
+    // image 2
+    /* créer le champ */
+    $wp_customize->add_setting('hero_background_2', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    /* créer le contrôleur */
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_2', array(
+        'label' => __('Image en arrière plan', 'theme_31w'),
         'section' => 'hero_section',
     )));
     /////////////////// couleur du texte de la section hero
