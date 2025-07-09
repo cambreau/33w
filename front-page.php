@@ -15,8 +15,7 @@
             <input type="radio" class="carrousel__radio" name="carrousel__radio">
             <input type="radio" class="carrousel__radio" name="carrousel__radio">
         </form>
-        <div class="piedpage__icone">
-        </div>
+        <?php get_template_part("gabarit/hero"); ?>
         <form class="inscription-form" action="">
             <div class="inscription-form__label-input">
                 <label class="inscription__label" for="nom">Nom</label>
@@ -42,9 +41,5 @@
     <div class="conteneur global">
         <?php get_template_part("gabarit/populaire"); ?> 
     </div> 
-    <section class="destination">
-        <h2 class="destination__titre">Articles de la catégorie</h2>
-        <div class="destination__list"></div>
-    </section>
 </main>
 <?php get_footer(); ?>
