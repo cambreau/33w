@@ -1,0 +1,15 @@
+.accordeon {
+  &__chk {
+    display: none;
+  }
+  &__excerpt {
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+.accordeon__chk:checked ~ .accordeon__excerpt {
+  max-height: 1000px;
+}
+
+/* input type="checkbox" */

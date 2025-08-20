@@ -337,6 +337,117 @@ li {
   }
 }
 
+.accordeon__chk {
+  display: none;
+}
+.accordeon__excerpt {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordeon__chk:checked ~ .accordeon__excerpt {
+  max-height: 1000px;
+}
+
+/* input type="checkbox" */
+.destination__categories {
+  display: flex;
+  justify-content: center;
+}
+.destination__categories__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.destination__categories__list li {
+  list-style: none;
+  display: inline-block;
+  padding: 3px 20px;
+  border-radius: 25px;
+  border: 2px solid #66bcbc;
+  background-color: #fbf8f4;
+  color: rgb(6, 3, 36);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.destination__categories__list li:hover, .destination__categories__list li.active {
+  background-color: #66bcbc;
+  color: #fbf8f4;
+  text-decoration: none;
+}
+.destination .destination__titre {
+  color: #66bcbc;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Cartes de la liste  */
+.destination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px;
+}
+.destination__list > div {
+  /* chaque “carte”  */
+  flex: 0 1 400px;
+  text-align: center;
+  min-height: 120px;
+  height: fit-content;
+  align-content: center;
+  justify-items: center;
+  background-color: #e9fcf5;
+  border: 1px solid #93afaf;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Titre cliquable*/
+  /* Lien “Lire plus” */
+}
+.destination__list > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.destination__list > div label {
+  display: block;
+  cursor: pointer;
+}
+.destination__list > div label h3 {
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 3px;
+  transition: color 0.3s ease;
+}
+.destination__list > div label h3:hover {
+  color: #66bcbc;
+  text-decoration: underline;
+}
+.destination__list > div a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 3px 20px;
+  border: 1px solid #66bcbc;
+  border-radius: 6px;
+  background-color: #fbf8f4;
+  color: rgb(6, 3, 36);
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.destination__list > div a:hover {
+  background-color: #66bcbc;
+  color: #fbf8f4;
+  text-decoration: none;
+}
+
 /* / ////////////////////////////// Compsant .inscription-form */
 .inscription-form {
   display: flex;

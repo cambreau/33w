@@ -1,0 +1,110 @@
+.destination {
+  &__categories {
+    display: flex;
+    justify-content: center;
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: $espacement-normal;
+
+      li {
+        list-style: none;
+        display: inline-block;
+        padding: $espacement-petit $espacement-normal;
+        border-radius: 25px;
+        border: 2px solid $couleur-principal;
+        background-color: $couleur-fond;
+        color: $couleur-texte;
+        font-family: $font-family-principal;
+        font-size: $taille-normal;
+        font-weight: $epaisseur-police-gras;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover,
+        &.active {
+          background-color: $couleur-principal;
+          color: $couleur-fond;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .destination__titre {
+    color: $couleur-principal;
+    text-align: center;
+    margin: $espacement-normal;
+  }
+}
+
+/* Cartes de la liste  */
+.destination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $espacement-moyen;
+  margin: $espacement-normal;
+
+  > div {
+    /* chaque “carte”  */
+    flex: 0 1 400px;
+    text-align: center;
+    min-height: 120px;
+    height: fit-content;
+    align-content: center;
+    justify-items: center;
+    background-color: $couleur-secondaire;
+    border: 1px solid $couleur-bordure;
+    border-radius: 8px;
+    padding: $espacement-normal;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Titre cliquable*/
+    label {
+      display: block;
+      cursor: pointer;
+
+      h3 {
+        font-family: $font-family-decorative;
+        font-weight: $epaisseur-police-tres-gras;
+        font-size: $taille-normal * 1.2;
+        margin-bottom: $espacement-petit;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $couleur-principal;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    /* Lien “Lire plus” */
+    a {
+      display: inline-block;
+      margin-top: $espacement-normal;
+      padding: $espacement-petit $espacement-normal;
+      border: 1px solid $couleur-principal;
+      border-radius: 6px;
+      background-color: $couleur-fond;
+      color: $couleur-texte;
+      font-weight: $epaisseur-police-gras;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $couleur-principal;
+        color: $couleur-fond;
+        text-decoration: none;
+      }
+    }
+  }
+}

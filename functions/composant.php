@@ -36,4 +36,25 @@ function vague($couleur_haut, $couleur_bas) { ?>
             d="M0,32L80,58.7C160,85,320,139,480,133.3C640,128,800,64,960,53.3C1120,43,1280,85,1360,106.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
         </path>
     </svg>
-    <?php } ?>
+    <?php 
+} 
+
+function extraire_list_categories($nom_categorie)
+{
+    //$parent_category_id = get_term_by("slug", $nom_categorie, "category");
+    $parent_category = get_category_by_slug($nom_categorie);
+    $tableau = array(
+        'parent' => $parent_category->term_id,
+        'hide_empty' => true
+    );
+    $list_categories = get_categories($tableau);
+    echo "<ul class='destination__categories__list'>";
+    foreach ($list_categories as $categorie) {
+        echo "<li data-id='" . $categorie->term_id . "'>" . $categorie->name . "</li>";
+    }
+    echo "</ul>";
+}
+
+
+
+?>

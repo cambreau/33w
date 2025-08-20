@@ -43,10 +43,9 @@
     </div> 
     <!-- section rest-api -->
     <section class="destination">
-        <ul class="list_categories">
-            <li data-id="4">Aventure</li>
-            <li data-id="3">Culturel</li>
-        </ul>
+        <div class="destination__categories">
+            <?php extraire_list_categories("destination"); ?>
+        </div>
         <h2 class="destination__titre">Articles de la catégorie</h2>
         <div class="destination__list"></div>
     </section>
