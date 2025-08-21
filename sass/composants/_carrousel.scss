@@ -1,0 +1,51 @@
+.carrousel {
+  transition: opacity 0.8s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  // Animation d'entrée
+  &[style*="opacity: 1"] {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  // Animation de sortie
+  &[style*="opacity: 0"] {
+    animation: fadeOut 0.8s ease-in-out;
+  }
+}
+
+// Keyframes pour les animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+// Variables SCSS pour la personnalisation
+$carrousel-transition-duration: 0.8s;
+$carrousel-transition-timing: ease-in-out;
+
+// Mixin pour les transitions
+@mixin carrousel-transition($property: opacity) {
+  transition: #{$property} #{$carrousel-transition-duration} #{$carrousel-transition-timing};
+}
+
+// Application du mixin
+.carrousel {
+  @include carrousel-transition(opacity);
+}
