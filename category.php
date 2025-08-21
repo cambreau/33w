@@ -6,27 +6,15 @@
    <!-- Recupere le header -->
    <?php get_header(); ?>
    <main>
-      <div class="conteneur">
+      <div class="conteneur categorie">
           <h2><?php single_cat_title() ?></h2>
           <?= category_description(); ?>
-          <?php 
-          if (have_posts()): 
-          ?>
-          <?php 
-            if (have_posts()) {
-              while (have_posts()) {
-                the_post();
-          ?>
                 <?php
-                if (!in_category('galerie')) {
-                  get_template_part("gabarit/carte");
+                $category = get_queried_object();
+                $nom = $category->slug;
+                // Afficher les cartes de la catégorie
+                afficher_cartes_categorie($nom);
                 ?>
-          <?php
-                }
-              }
-            } 
-          endif;
-          ?>
         </div>
    </main>
    <!-- Recupere le footer -->

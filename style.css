@@ -575,4 +575,8 @@ li {
 }
 .conteneur__carte__categories .post-categories > li > a {
   color: white;
+}
+
+.conteneur.categorie {
+  margin: 80px;
 }/*# sourceMappingURL=style.css.map */

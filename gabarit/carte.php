@@ -15,7 +15,7 @@ $lien = "<a class='conteneur__carte__lien' href=" . get_permalink() . ">Suite</a
   <img src="<?php echo get_template_directory_uri(); ?>/images/stars.png" alt="Note Client">Note client :
   <?php the_field('note_client'); ?>
 </p>
-    <p class="conteneur__carte__temperature">
+<p class="conteneur__carte__temperature">
   <img src="<?php echo get_template_directory_uri(); ?>/images/temp-min.png" alt="Température minimum">Min :
   <?php the_field('temperature_minimum'); ?> &deg;C
 </p>
