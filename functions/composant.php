@@ -40,6 +40,28 @@ function vague($couleur_haut, $couleur_bas)
     <?php 
 } 
 
+/**
+ *  Générateur de min-vague pour séparer deux sections
+ */
+function mini_vague($couleur) { ?>
+    <style>
+        .mini-vague {
+            display: block;
+            width: 100%;
+            height: 50px; /* hauteur de la vague */
+        }
+        .mini-vague path {
+            stroke: <?= $couleur ?>; /* couleur de la ligne */
+            stroke-width: 6; /* ligne plus épaisse */
+            fill: none; /* pas de remplissage */
+        }
+    </style>
+
+    <svg class="mini-vague" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 50" preserveAspectRatio="none">
+        <!-- vague très arrondie -->
+        <path d="M0,25 C360,-25 1080,75 1440,25"></path>
+    </svg>
+<?php }
 
 /**
  * Afficher la listes des categories.

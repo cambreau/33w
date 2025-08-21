@@ -28,10 +28,14 @@
     </section>
     
     <div class="conteneur global">
-        <?php 
-            // Afficher les cartes de la catégorie
-            afficher_cartes_categorie("populaire");
-        ?>
+    <?php 
+        mini_vague("#93afaf");
+
+        // Afficher les cartes de la catégorie
+        afficher_cartes_categorie("populaire");
+        
+        mini_vague("#93afaf")
+    ?>
     </div> 
     
     <!-- section rest-api -->
