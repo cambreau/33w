@@ -16,13 +16,22 @@
                 <p class="piedpage__coordonnees">20 rue la prairie, Brossard</p>
                 <p class="piedpage__coordonnees">1-800-555-1234</p>
                 <?php get_search_form() ?>
+              
             </section>
             <p class="piedpage__description">
-            Bienvenue sur Évasion Totale, votre portail vers des expériences inoubliables aux quatre coins du globe ! Que vous soyez un passionné de sport, un adepte de la relaxation ou un aventurier dans l’âme, nous avons sélectionné pour vous les meilleures destinations et activités pour répondre à toutes vos envies de voyage.
+                Bienvenue sur Évasion Totale, votre portail vers des expériences inoubliables aux quatre coins du globe ! Que vous soyez un passionné de sport, un adepte de la relaxation ou un aventurier dans l’âme, nous avons sélectionné pour vous les meilleures destinations et activités pour répondre à toutes vos envies de voyage.
             </p>
+
         </div>
         <div class="piedpage__ligne-2">
             <?php icone_sociaux('#e9fcf5') ?>
+            <?php
+            $footer_image = get_theme_mod('footer_image'); 
+            if ($footer_image): ?>
+            <div class="footer-image" style="max-width: 300px; margin: 0 auto;">
+                <img src="<?php echo esc_url($footer_image); ?>" alt="Footer Image" style="width: 100%; height: auto;">
+            </div>
+            <?php endif; ?>
         </div>
   </footer>
 </body>

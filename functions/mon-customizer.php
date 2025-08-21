@@ -37,7 +37,6 @@ function club_voyage_customize_register($wp_customize)
     ));
 
     ////////////////////// image
-
     /* Champ : nombre d’images */  
     $wp_customize->add_setting('hero_background_count', array( /**** RENVOIE FORCEMENT UN BOOLEEN */
         'default'           => 3,
@@ -104,19 +103,26 @@ function club_voyage_customize_register($wp_customize)
         'section' => 'footer_section',
     )));
 
-}
+    ////////////////////// Image footer
+    /* créer le champ */
+    $wp_customize->add_setting('footer_image', array(
+        'default'           => '', // URL par défaut
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    /* créer le contrôleur */
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_image_control', array(
+        'label'    => __('Image du footer', 'club-voyage'),
+        'section'  => 'footer_section',
+        'settings' => 'footer_image',
+    )));
 
-add_action('customize_register', 'club_voyage_customize_register');
-
-/////////////////// Image par defaut
-function theme_customizer_register($wp_customize) {
-
-    // Section Images par defaut
-    $wp_customize->add_section('default_images_section', array(
+     // Section Images par defaut
+     $wp_customize->add_section('default_images_section', array(
         'title'    => __('Images par défaut', 'ton-theme'),
         'priority' => 30,
     ));
 
+    /////////////////// Image par defaut
     // Paramètre pour l'image par défaut des destinations
     $wp_customize->add_setting('default_destination_image', array(
         'default'           => '', // tu peux mettre un URL par défaut
@@ -133,8 +139,12 @@ function theme_customizer_register($wp_customize) {
             'settings' => 'default_destination_image',
         )
     ));
+
 }
-    add_action('customize_register', 'theme_customizer_register');
+
+add_action('customize_register', 'club_voyage_customize_register');
+
+
 
 
 // Etape obligatoire car hero_background_count renvoie booleen au lieu du nbr.
