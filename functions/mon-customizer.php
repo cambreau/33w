@@ -35,61 +35,42 @@ function club_voyage_customize_register($wp_customize)
         'section' => 'hero_section',
         'type' => 'text',
     ));
+
     ////////////////////// image
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_0', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
+
+    /* Champ : nombre d’images */  
+    $wp_customize->add_setting('hero_background_count', array( /**** RENVOIE FORCEMENT UN BOOLEEN */
+        'default'           => 3,
+        'sanitize_callback' => 'absint',
+        'transport'         => 'refresh',
     ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_0', array(
-        'label' => __('Image en arrière plan', 'club-voyage'),
-        'section' => 'hero_section',
-    )));
-     // image 1
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_1', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
+
+    $wp_customize->add_control('hero_background_count', array(
+        'label'       => __('Nombre d’images du carrousel', 'club-voyage'),
+        'section'     => 'hero_section',
+        'type'        => 'number',
+        'input_attrs' => array(
+            'min'  => 1,
+            'max'  => 10,
+            'step' => 1,
+        ),
     ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_1', array(
-        'label' => __('Image en arrière plan', 'club-voyage'),
-        'section' => 'hero_section',
-    )));
-    // image 2
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_2', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_2', array(
-        'label' => __('Image en arrière plan', 'club-voyage'),
-        'section' => 'hero_section',
-    )));
-    // image 1
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_1', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_1', array(
-        'label' => __('Image en arrière plan', 'club-voyage'),
-        'section' => 'hero_section',
-    )));
-    // image 2
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_2', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_2', array(
-        'label' => __('Image en arrière plan', 'club-voyage'),
-        'section' => 'hero_section',
-    )));
+
+/* Créer TOUS les champs d'images possibles (0 à 9) */
+    for ($i = 0; $i < 10; $i++) {
+        $setting_id = "hero_background_$i";
+        /* créer le champ */
+        $wp_customize->add_setting($setting_id, array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+        /* créer le contrôleur */
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, $setting_id, array(
+            'label' => sprintf(__('Image en arrière plan %d', 'club-voyage'), $i + 1),
+            'section' => 'hero_section',
+        )));
+    }
+
     /////////////////// couleur du texte de la section hero
     ////////////////////// champ couleur
     /* créer le champ */
@@ -126,3 +107,19 @@ function club_voyage_customize_register($wp_customize)
 }
 
 add_action('customize_register', 'club_voyage_customize_register');
+
+
+// Etape obligatoire car hero_background_count renvoie booleen au lieu du nbr.
+/**
+ * Ajouter du JavaScript pour masquer/afficher dynamiquement les champs d'images
+ */
+function club_voyage_customize_controls_js() {
+    wp_enqueue_script(
+        'club-voyage-customizer',
+        get_template_directory_uri() . '/script/customizer.js',
+        array('jquery', 'customize-controls'),
+        '1.0.0',
+        true
+    );
+}
+add_action('customize_controls_enqueue_scripts', 'club_voyage_customize_controls_js');

@@ -30,5 +30,21 @@ $lien = "<a class='conteneur__carte__lien' href=" . get_permalink() . ">Suite</a
   <?php the_field('temperature_maximum'); ?> &deg;C
 </p>
 <div class="conteneur__carte__categories">
-    <?php the_category(); ?></div>
+<?php 
+$categories = get_the_category();
+$exclude_nom = 'populaire'; // slug de la catégorie à exclure
+if ( ! empty( $categories ) ) {
+    $separator = ', ';
+    $output = '';
+
+    foreach ( $categories as $category ) {
+        if ( $category->slug !== $exclude_nom ) {
+            $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+        }
+    }
+
+    echo trim( $output, $separator );
+}
+      ?>
+</div>
 </article>
