@@ -108,6 +108,34 @@ function club_voyage_customize_register($wp_customize)
 
 add_action('customize_register', 'club_voyage_customize_register');
 
+/////////////////// Image par defaut
+function theme_customizer_register($wp_customize) {
+
+    // Section Images par defaut
+    $wp_customize->add_section('default_images_section', array(
+        'title'    => __('Images par défaut', 'ton-theme'),
+        'priority' => 30,
+    ));
+
+    // Paramètre pour l'image par défaut des destinations
+    $wp_customize->add_setting('default_destination_image', array(
+        'default'           => '', // tu peux mettre un URL par défaut
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    // Contrôle de l'image
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'default_destination_image_control',
+        array(
+            'label'    => __('Image par défaut pour les destinations', 'ton-theme'),
+            'section'  => 'default_images_section',
+            'settings' => 'default_destination_image',
+        )
+    ));
+}
+    add_action('customize_register', 'theme_customizer_register');
+
 
 // Etape obligatoire car hero_background_count renvoie booleen au lieu du nbr.
 /**

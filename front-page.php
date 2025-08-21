@@ -26,11 +26,17 @@
             </div>
         </form>
     </section>
+    
     <div class="conteneur global">
-        <?php get_template_part("gabarit/populaire"); ?> 
+        <?php 
+            // Afficher les cartes de la catégorie
+            afficher_cartes_categorie("populaire");
+        ?>
     </div> 
+    
     <!-- section rest-api -->
     <section class="destination">
+   
         <div class="destination__categories">
             <?php extraire_list_categories("destination"); ?>
         </div>

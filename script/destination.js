@@ -1,17 +1,19 @@
 (function () {
-  const list_categories = document.querySelectorAll(".list_categories li");
+  const list_categories = document.querySelectorAll(
+    ".destination__categories__list li"
+  );
   console.log("list_categories.length", list_categories.length);
   list_categories.forEach((categorie) => {
-    categorie.addEventListener("mousedown", (e) => {
+    categorie.addEventListener("click", (e) => {
+      // console.log(categorie.dataset.id);
       console.log(categorie.dataset.id);
-      const categoryId = categorie.dataset.id;
-      mon_fetch(categoryId);
+      mon_fetch(categorie.dataset.id);
     });
   });
 
-  const categoryId = 4; // Remplacez par l'ID de la catégorie souhaitée
+  // const categoryId = 4; // Remplacez par l'ID de la catégorie souhaitée
   const domaine = document.querySelector("base").href;
-  mon_fetch(categoryId);
+  // mon_fetch(categoryId);
 
   function mon_fetch(categoryId) {
     const apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;

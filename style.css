@@ -359,6 +359,7 @@ li {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  margin-top: 20px;
 }
 .destination__categories__list li {
   list-style: none;
@@ -392,7 +393,8 @@ li {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  margin: 20px;
+  margin-top: 20px;
+  padding: 20px;
 }
 .destination__list > div {
   /* chaque “carte”  */
@@ -527,7 +529,7 @@ li {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  margin: 80px 20px;
+  margin: 80px 0;
 }
 .conteneur__carte {
   display: flex;

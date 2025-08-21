@@ -6,7 +6,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: $espacement-normal;
-  margin: $espacement-large $espacement-normal;
+  margin: $espacement-large 0;
 
   &__carte {
     display: flex;
