@@ -22,14 +22,14 @@ h1 {
   font-family: "montserrat", sans-serif;
   font-size: clamp(2rem, 1vw + 2.2rem, 2.5rem);
   font-weight: 700;
-  color: rgb(6, 3, 36);
+  color: #060324;
 }
 
 h2 {
   font-family: "montserrat", sans-serif;
   font-size: clamp(1.5rem, 1vw + 1.7rem, 2rem);
   font-weight: 500;
-  color: rgb(6, 3, 36);
+  color: #060324;
   padding-bottom: 20px;
 }
 
@@ -37,13 +37,13 @@ h3 {
   font-family: "montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  color: rgb(6, 3, 36);
+  color: #060324;
 }
 
 p {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  color: rgb(6, 3, 36);
+  color: #060324;
 }
 
 a {
@@ -51,7 +51,7 @@ a {
   font-size: 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(6, 3, 36);
+  color: #060324;
 }
 
 a:hover {
@@ -66,12 +66,12 @@ input {
 label {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  color: rgb(6, 3, 36);
+  color: #060324;
   width: 200px;
 }
 
 button {
-  color: rgb(6, 3, 36);
+  color: #060324;
   background-color: #fbf8f4;
 }
 
@@ -260,6 +260,25 @@ li {
   z-index: 10;
 }
 
+.erreur-404 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+.erreur-404__titre {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.erreur-404__message {
+  max-width: 600px;
+  font-size: 1.2rem;
+}
+
 .carte-unique {
   display: flex;
   flex-direction: column;
@@ -368,7 +387,7 @@ li {
   border-radius: 25px;
   border: 2px solid #66bcbc;
   background-color: #fbf8f4;
-  color: rgb(6, 3, 36);
+  color: #060324;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -439,7 +458,7 @@ li {
   border: 1px solid #66bcbc;
   border-radius: 6px;
   background-color: #fbf8f4;
-  color: rgb(6, 3, 36);
+  color: #060324;
   font-weight: 500;
   text-transform: uppercase;
   transition: all 0.3s ease;

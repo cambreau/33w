@@ -1,0 +1,20 @@
+.erreur-404 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+
+  &__titre {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__message {
+    max-width: 600px;
+    font-size: 1.2rem;
+  }
+}

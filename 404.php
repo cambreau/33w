@@ -6,8 +6,10 @@
    <!-- Recupere le header -->
    <?php get_header(); ?>
    <main>
-       <h1 class="erreur-404__titre">Erreur 404</h1>
-       <p class="erreur-404__message">La page que vous cherchez n'existe pas.</p>
+       <!-- <h1 class="erreur-404__titre">Erreur 404</h1>
+       <p class="erreur-404__message">La page que vous cherchez n'existe pas.</p> -->
+       <?php get_template_part("gabarit/erreur-404"); ?>
+
    </main>
    <!-- Recupere le footer -->
    <?php get_footer(); ?> 
