@@ -207,6 +207,32 @@ function club_voyage_customize_register($wp_customize)
         'settings' => 'page404_color',
     )));
 
+    // Paramètre couleur des boutons
+    $wp_customize->add_setting('page404_button_color', array(
+        'default'           => '#66bcbc',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+   
+    // Controle couleur des boutons
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'page404_button_color', array(
+        'label'    => __('Couleur des boutons 404', 'club-voyage'),
+        'section'  => 'erreur-404_section',
+        'settings' => 'page404_button_color',
+    )));
+    
+    // Paramètre du formulaire de recherche 404
+    $wp_customize->add_setting('page404_search_color', array(
+        'default'           => '#66bcbc',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    
+    // Controle du formulaire de recherche 404
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'page404_search_color', array(
+        'label'    => __('Couleur du texte du formulaire 404', 'club-voyage'),
+        'section'  => 'erreur-404_section',
+        'settings' => 'page404_search_color',
+    )));
+
 
 }
 

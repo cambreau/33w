@@ -4,6 +4,8 @@ $title      = get_theme_mod('page404_title', 'Erreur 404 !');
 $title_color= get_theme_mod('page404_title_color', '#060324');
 $message    = get_theme_mod('page404_message', 'Erreur 404 !');
 $text_color = get_theme_mod('page404_color', '#060324');
+$button_color = get_theme_mod('page404_button_color', '#66bcbc');
+$search_color = get_theme_mod('page404_search_color', '#66bcbc');
 ?>
 
 <style>
@@ -14,6 +16,8 @@ $text_color = get_theme_mod('page404_color', '#060324');
     .erreur-404__message{
         color: <?= $text_color ?>;
     }
+
+
 
 </style>
 
