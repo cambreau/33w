@@ -36,7 +36,7 @@ function club_voyage_customize_register($wp_customize)
         'type' => 'text',
     ));
 
-    ////////////////////// image
+    ////////////////////// image carrousel
     /* Champ : nombre d’images */  
     $wp_customize->add_setting('hero_background_count', array( /**** RENVOIE FORCEMENT UN BOOLEEN */
         'default'           => 3,
@@ -139,6 +139,74 @@ function club_voyage_customize_register($wp_customize)
             'settings' => 'default_destination_image',
         )
     ));
+
+    /////////////////// Page 404
+    // SECTION ERREUR 404
+    $wp_customize->add_section('erreur-404_section', array(
+        'title'    => __('Section erreur 404', 'club-voyage'),
+        'priority' => 40,
+    ));
+
+    // Paramètre pour l'image de fond 
+    $wp_customize->add_setting('page404_background', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    // Contrôle de l'image
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'page404_background', array(
+        'label'    => __('Image d\'arrière-plan Erreur 404', 'club-voyage'),
+        'section'  => 'erreur-404_section',
+        'settings' => 'page404_background',
+    )));
+
+    //Paramètre pour le titre
+    $wp_customize->add_setting('page404_title', array(
+        'default'           => __('Erreur 404 !', 'club-voyage'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    // Contrôle du titre
+    $wp_customize->add_control('page404_title', array(
+        'label'    => __('Titre 404', 'club-voyage'),
+        'section'  => 'erreur-404_section',
+        'type'     => 'text',
+    ));
+
+    // Paramètre pour la couleur du titre
+    $wp_customize->add_setting('page404_title_color', array(
+        'default'           => '#060324',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    // Contrôle de la couleur du titre
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'page404_title_color', array(
+        'label'    => __('Couleur du titre 404', 'club-voyage'),
+        'section'  => 'erreur-404_section',
+        'settings' => 'page404_title_color',
+    )));
+
+    // Paramètre pour le message
+    $wp_customize->add_setting('page404_message', array(
+        'default'           => __('Erreur 404 !', 'club-voyage'),
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ));
+    // Controle pour le message
+    $wp_customize->add_control('page404_message', array(
+        'label'    => __('Message 404', 'club-voyage'),
+        'section'  => 'erreur-404_section',
+        'type'     => 'textarea',
+    ));
+
+    // Paramètre pour la couleur du message
+    $wp_customize->add_setting('page404_color', array(
+        'default'           => '#060324',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    // Controle pour la couleur du message
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'page404_color', array(
+        'label'    => __('Couleur du message 404', 'club-voyage'),
+        'section'  => 'erreur-404_section',
+        'settings' => 'page404_color',
+    )));
+
 
 }
 
