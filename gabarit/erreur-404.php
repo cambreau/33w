@@ -27,4 +27,12 @@ $text_color = get_theme_mod('page404_color', '#060324');
         <?= $message ?>
     </p>
 
+    <div class="erreur-404__lien">
+                <?php wp_nav_menu(array(
+                    "menu" => "erreur-404",
+                    "container" => "nav"
+                )) ?>
+    </div>
+
+
 </div>
