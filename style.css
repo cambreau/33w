@@ -298,7 +298,6 @@ li {
 }
 .erreur-404__lien .menu li a {
   display: block;
-  background-color: #ffdf43;
   color: #000;
   font-weight: bold;
   padding: 12px 20px;
@@ -307,6 +306,19 @@ li {
   transition: transform 0.2s;
 }
 .erreur-404__lien .menu li a:hover {
+  transform: scale(1.05);
+}
+.erreur-404__btn {
+  display: inline-block;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 20px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+.erreur-404__btn:hover {
   transform: scale(1.05);
 }
 .erreur-404__recherche {
@@ -325,11 +337,8 @@ li {
   width: 250px;
   text-align: center;
 }
-.erreur-404__recherche_.erreur-404_recherche .recherche_bouton {
-  background: none;
-  border: none;
-  margin-left: 10px;
-  cursor: pointer;
+.erreur-404__recherche button {
+  display: none;
 }
 
 /* TABLETTE */
