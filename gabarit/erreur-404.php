@@ -34,5 +34,9 @@ $text_color = get_theme_mod('page404_color', '#060324');
                 )) ?>
     </div>
 
+    <div class="erreur-404__recherche">
+        <?php get_search_form(); ?>
+    </div>
+
 
 </div>
